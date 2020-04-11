@@ -5,6 +5,9 @@ html {
   line-height: 1.4;
 }
 
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -16,3 +19,39 @@ html {
   text-shadow: none;
 }
 
+.header{
+  height: 100vh;
+  width: 100vw;
+  background: transparent url('../img/test.jpg') no-repeat top center;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.header__title {
+  font-family: 'Satisfy', cursive;
+  margin: 2rem 0 1rem 0;
+  font-size: 12vw;
+  mix-blend-mode: exclusion;
+}
+
+.header__slogan {
+  display: inline-block;
+  padding: .25rem;
+  font-size: 1.15rem;
+  font-style: italic;
+  background: black;
+}
+
+.header__logo {
+  width: 200px;
+  max-width: 50vw;
+  height: auto;
+  background: black;
+}
+.header__nav {
+  display: none;
+}
