@@ -41,9 +41,9 @@ body{
 .header__slogan {
   display: inline-block;
   padding: .25rem;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-style: italic;
-  background: black;
+  background: rgba(0,0,0,.5);
 }
 
 .header__logo {
