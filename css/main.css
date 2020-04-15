@@ -55,3 +55,45 @@ body{
 .header__nav {
   display: none;
 }
+
+.wrap{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.rules {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+h1{
+  font-size: 3rem;
+  display: block;
+  text-align: center;
+}
+
+#rules {
+
+}
+
+.segments {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.segments__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.segments__item {
+  border: 1px solid #eee;
+  margin: 0 1rem 0 0;
+}
+.segments__item:last-child{
+  margin-right: 0;
+}
