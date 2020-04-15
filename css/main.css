@@ -63,7 +63,7 @@ body{
 }
 
 .rules {
-  max-width: 750px;
+  max-width: 780px;
   margin: 0 auto;
 }
 
@@ -88,11 +88,13 @@ h1{
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .segments__item {
   border: 1px solid #eee;
-  margin: 0 1rem 0 0;
+  margin: 0 1rem 1rem 0;
 }
 .segments__item:last-child{
   margin-right: 0;
