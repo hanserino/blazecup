@@ -12,7 +12,8 @@ html {
 }
 
 body{
-  font-family: 'Rubik', sans-serif;}
+  font-family: Arial, Helvetica, sans-serif;  
+}
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -28,7 +29,7 @@ body{
   position: relative;
   height: 100vh;
   width: 100vw;
-  background: black url('../img/bg2.jpg') no-repeat top center;
+  background: black url('../img/header.jpg') no-repeat top center;
   background-size: cover;
   text-align: center;
   display: flex;
@@ -104,6 +105,10 @@ body{
 .rules {
   /*max-width: 100%;
   margin: 0 auto;*/
+}
+.rules header {
+  font-size: 1.25rem;
+  text-align: center;
 }
 
 h1{
