@@ -8,12 +8,11 @@ html {
 html {
   color: #222;
   font-size: 1em;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 body{
-  font-family: Arial, Helvetica, sans-serif;
-}
+  font-family: 'Rubik', sans-serif;}
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -215,7 +214,7 @@ h1{
 }
 .submit-btn {
 	box-shadow:inset 0px 1px 0px 0px #a4e271;
-	background-color:#89c403;
+	background-color:#7bb945;
 	border-radius:6px;
 	border:1px solid #74b807;
 	display:inline-block;
@@ -235,5 +234,6 @@ h1{
 	position:relative;
 	top:1px;
 }
-
-
+abbr {
+  text-decoration: none;
+}
