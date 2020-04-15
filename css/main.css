@@ -1,3 +1,9 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 html {
   color: #222;
@@ -63,8 +69,8 @@ body{
 }
 
 .rules {
-  max-width: 780px;
-  margin: 0 auto;
+  /*max-width: 100%;
+  margin: 0 auto;*/
 }
 
 h1{
@@ -79,23 +85,121 @@ h1{
 
 .segments {
   margin: 0 auto;
-  display: inline-block;
 }
 
 .segments__list {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: block;
   justify-content: center;
+  overflow-y:hidden;
+  white-space:nowrap;
 }
 
 .segments__item {
   border: 1px solid #eee;
-  margin: 0 1rem 1rem 0;
+  display: inline-block;
+  position: relative;
+  padding: .25rem .5rem .5rem .5rem;
+  margin: 0 .5rem 0 0;
+  width: 60vw;
 }
-.segments__item:last-child{
-  margin-right: 0;
+
+@media only screen and (min-width: 660px) {
+  .segments__list {
+    white-space: normal;
+    display: flex;
+  }
+  .segments__item {
+    width: 33.33333%;
+  }
+
+  
+
 }
+
+.segments__item a {
+  display: block;
+  color: black;
+}
+
+.link-icon{
+  color: orangered;
+}
+.segments__item a:hover .link-icon {
+  /*color: white;*/
+}
+.segments__item a:hover {
+  /*background: black;
+  color: white;*/
+}
+.segments__item a:hover img {
+  /*filter: invert(1);*/
+}
+
+.segments__item a {
+  text-decoration: none;
+}
+
+.segment-stats {
+
+}
+
+.segment-stats th,
+.segment-stats td {
+ 
+}
+.segment-stats th {
+  padding: .25rem .25rem .25rem 0;
+}
+.segment-stats td {
+  padding: .25rem 0.25rem .25rem;
+  text-align: right;
+}
+
+.segment-stats__item {
+  
+}
+
+.segments__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.segments__item a:hover .overlay {
+  
+}
+
+.segments__item a:hover > h3 {
+  text-decoration: underline;
+}
+
+.segments__item .submit-btn{
+  color: white;
+  margin: .5rem 0 0 0;
+}
+.submit-btn {
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background-color:#89c403;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 1rem 1.15rem;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #528009;
+  text-align: center;
+}
+.submit-btn:hover {
+	background-color:#77a809;
+}
+.submit-btn:active {
+	position:relative;
+	top:1px;
+}
+
+
