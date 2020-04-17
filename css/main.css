@@ -63,6 +63,8 @@ body{
   display: inline-block;
   padding: .25rem;
   font-size: 1.25rem;
+  position: relative;
+  z-index: 3;
 }
 
 .header__logo {
@@ -74,6 +76,36 @@ body{
 @media screen and (min-width: 700px){
   .header__logo {width: 200px;}
 }
+.header__spons {
+  position: absolute;
+  bottom: 3rem;
+  z-index: 3;
+}
+
+.header__spons__title{
+  display: block;
+  margin: 0 0 1rem 0;
+}
+
+.header__spons__logo{
+  display: block;
+  width: 100%;
+}
+
+.header__spons__item{
+  display: inline-block;
+  font-size: 0;
+  text-decoration: none;
+  width: 100px;
+}
+.header__spons__item:hover img {
+  
+}
+
+.header__spons__item img {
+
+}
+
 .header__nav {
   display: none;
 }
