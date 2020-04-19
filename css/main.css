@@ -31,6 +31,9 @@ body{
   background: var(--sb-black);
   color: white;
 }
+section {
+  
+}
 
 h1, h2, h3 {
   font-family: 'IBM Plex Mono', monospace;
@@ -158,6 +161,7 @@ img {
   color: var(--sb-grey);
   font-size: .85rem;
   font-weight: normal;
+  text-transform: none;
 }
 
 .header__sponsor__item {}
@@ -171,7 +175,7 @@ img {
     order: 1;
     border-width: 0 2px 0 0;
     flex: 0 0 20rem;
-    padding: 5rem 0 2rem 0;
+    padding: 5rem 0 4rem 0;
   }
 
   .header__nav__list {
@@ -217,6 +221,11 @@ img {
   .header__sponsor__item {
     width: 110px;
     display: inline-block;
+  }
+
+  section {
+    padding: 2rem 1rem 2rem 10rem;
+    max-width: 2000px;
   }
 }
 
