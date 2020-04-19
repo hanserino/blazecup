@@ -50,13 +50,13 @@ h1{
 }
  
 .vr-type-1 {
-  text-shadow: -2px 3px 0px var(--sb-navyBlue),
-              -4px 6px 0px var(--sb-orange),
-              -6px 11px 0px var(--sb-pink);
+  text-shadow: -2px 2px 0px var(--sb-navyBlue),
+              -4px 4px 0px var(--sb-orange),
+              -6px 7px 0px var(--sb-pink);
 }
 .vr-type-2 {
-  text-shadow: -2px 3px 0px var(--sb-navyBlue),
-              -4px 6px 0px var(--sb-orange);
+  text-shadow: -2px 2px 0px var(--sb-navyBlue),
+              -4px 4px 0px var(--sb-orange);
 }
 
 
@@ -175,6 +175,33 @@ img {
   display: block;
 }
 
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+.site-section{}
+
+.site-section__header{
+  margin: 0 0 4rem 0;
+}
+
+.site-section__header__title{
+  margin: 1rem 0 0 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.site-section__header__subtitle{
+  margin: 0;
+  color: var(--sb-grey)
+}
+
+
+/* ==========================================================================
+   Segments
+   ========================================================================== */
+
+
 .segments{
 
 }
@@ -184,9 +211,15 @@ img {
   flex-direction: column;
   width: 100%;
 }
+.segments__segment__inner{}
+
+.segment__title {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
 
 .segment__link{
-
+  width: 100%;
 }
 
 .segment__link:hover{
@@ -195,11 +228,12 @@ img {
 
 .segment__link__img{
   display: block;
-  filter: invert(1);
 }
 .segment__link__text{
   display: block;
   color: var(--sb-pink);
+  font-size: 1.5rem;
+  margin: 1rem 0 0 0;
   text-decoration: underline;
 }
 
@@ -207,10 +241,44 @@ img {
   
 }
 
-.segment__stats{}
-.segment__stats__item{}
-.segment__stats__item__title{}
-.segment__stats__item__stat{}
+.segment__stats{
+  width: 100%;
+}
+.segment__stats__item{
+  margin: 0 0 1.5rem 0;
+}
+
+.segment__stats__item__title{
+  color: var(--sb-grey);
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.segment__stats__item__stat{
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 300;
+  line-height: 1;
+  margin: 0 0 1rem 0;
+}
+
+@media screen and (min-width: 700px){
+  .segment__link{
+    max-width: 25rem;
+    padding: 2rem 3rem 2rem 0;
+    border-right: 2px solid var(--sb-grey);
+  }
+  .segments__segment__inner{
+    display: flex;
+    flex-direction: row;
+  }
+  .segment__stats{
+    padding: 2rem 0 4rem 3rem;
+  }
+}
 
 @media screen and (min-width: 700px){
   .header__nav{
