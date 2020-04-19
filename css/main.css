@@ -49,11 +49,16 @@ h1{
   }
 }
  
-.vr-type {
+.vr-type-1 {
   text-shadow: -2px 3px 0px var(--sb-navyBlue),
               -4px 6px 0px var(--sb-orange),
               -6px 11px 0px var(--sb-pink);
 }
+.vr-type-2 {
+  text-shadow: -2px 3px 0px var(--sb-navyBlue),
+              -4px 6px 0px var(--sb-orange);
+}
+
 
 img {
   max-width: 100%;
@@ -169,6 +174,43 @@ img {
 .header__sponsor__item img{
   display: block;
 }
+
+.segments{
+
+}
+
+.segments__segment{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.segment__link{
+
+}
+
+.segment__link:hover{
+
+}
+
+.segment__link__img{
+  display: block;
+  filter: invert(1);
+}
+.segment__link__text{
+  display: block;
+  color: var(--sb-pink);
+  text-decoration: underline;
+}
+
+.segment__link:hover .segment__link__text{
+  
+}
+
+.segment__stats{}
+.segment__stats__item{}
+.segment__stats__item__title{}
+.segment__stats__item__stat{}
 
 @media screen and (min-width: 700px){
   .header__nav{
