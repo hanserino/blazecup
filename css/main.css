@@ -42,7 +42,7 @@ h1{
 
 @media screen and (min-width: 700px){
   h1{
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
  
@@ -172,9 +172,6 @@ img {
     border-width: 0 2px 0 0;
     flex: 0 0 20rem;
     padding: 5rem 0 2rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
 
   .header__nav__list {
@@ -191,23 +188,30 @@ img {
 
   .header__intro{
     order: 2;
-    padding: 4rem 1rem 1rem 3rem;
-    max-width: 30rem;
+    position: relative;
+    padding: 4rem 1rem 0rem 3rem;
+    max-width: 40rem;
   }
 
   .header__intro__date {}
   .header__intro__text1 {}
-  .header__intro__text2 {}
+
+  .header__intro__text2 {
+    margin-bottom: 0;
+  }
+
+  .header__sponsor {
+    position: absolute;
+    bottom: .5rem;
+    left: -12rem;
+    padding: 0 2rem;
+    text-align: center;
+  }
 
   .header__inner{
     flex-direction: row;
     min-height: 80vh;
     padding: 0 0 1rem 0;
-  }
-
-  .header__sponsor {
-    padding: 0 2rem;
-    text-align: center;
   }
 
   .header__sponsor__item {
