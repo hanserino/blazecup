@@ -407,6 +407,7 @@ img {
 
 .rules__article{
   color: var(--sb-grey);
+  padding: 0 1rem;
 }
 
 .rules__article em {
@@ -475,6 +476,7 @@ img {
     max-width: 780px;
     columns: 2;
     column-gap: 3rem;
+    padding: 0;
   }
 
   .footer {
