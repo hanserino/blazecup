@@ -32,7 +32,7 @@
                         <h3 class="header__sponsor__title">Med hjelp fra</h3>
                         
                         <div class="header__sponsor__item">
-                            <a href="https://stores.arcteryx.com/shop/oslo">
+                            <a tabindex="3" href="https://stores.arcteryx.com/shop/oslo">
                                 <img src="img/arcteryx_oslo_logo.png" alt="Arc'teryx Oslo Logo">
                             </a>
                         </div>
@@ -40,22 +40,13 @@
 
                 </div>
 
-                <nav class="header__nav">
-                    <ul class="header__nav__list">
+                <nav class="header__nav" id="nav">
+                    <ul class="header__nav__list" >
                         <li class="header__nav__item">
-                            <a class="header__nav__link" href="#">Ruter</a>
+                            <a tabindex="1" class="header__nav__link" href="#ruter" data-scroll="ruter">Ruter</a>
                         </li>
                         <li class="header__nav__item">
-                            <a class="header__nav__link header__nav__link--active" href="#">Delta</a>
-                        </li>
-                        <li class="header__nav__item">
-                            <a class="header__nav__link" href="#">Regler</a>
-                        </li>
-                        <li class="header__nav__item">
-                            <a class="header__nav__link" href="#">Rankings</a>
-                        </li>
-                        <li class="header__nav__item">
-                            <a class="header__nav__link" href="#">Premier</a>
+                            <a tabindex="2" class="header__nav__link" href="#regler" data-scroll="regler">Regler</a>
                         </li>
                     </ul>
 
@@ -68,7 +59,7 @@
             <img src="img/header.jpg" alt="Hanserino som løper en ukjent sti i Lillomarka">
         </section>
 
-        <section id="ruter" class="site-section segments">
+        <section id="ruter" data-anchor="ruter" class="site-section segments">
             <header class="site-section__header">
                 <h1 class="site-section__header__title">3 ruter 1 cup</h1>
                 <p class="site-section__header__subtitle">For å delta må du løpe tre Strava-segmenter mellom 01. mai og 31. juli</p>
@@ -126,7 +117,7 @@
 
 
                 <div class="segments__segment">
-                    <h3 class="segment__title" id="stirsdag-classic">3. Lillomarka Rundt</h3>
+                    <h3 class="segment__title" id="lillomarka-rundt">3. Lillomarka Rundt</h3>
                     <div class="segments__segment__inner">
                         <a class="segment__link" href="https://www.strava.com/segments/16455185" target="_blank">
                             <img class="segment__link__img" src="img/lilotrail.jpg" alt="Bilde av gps-sporene til Lillomarka Rundt">
@@ -151,7 +142,7 @@
             </div>
         </section>
 
-        <section id="regler" class="site-section rules">
+        <section id="regler" data-anchor="regler" class="site-section rules">
             <header class="site-section__header">
                 <h1 class="site-section__header__title">Regler</h1>
             </header>
@@ -202,12 +193,14 @@
             <a class="footer__sb" href="http://skyblazers.no/" target="_blank">
                 <img src="img/skyblazers.v2.negative.simplified.png" alt="Sky Blazers Logo" />
             </a>
-            
+
         </footer>
     </main>
 
 
     <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
     <script src="js/main.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163405044-1"></script>
