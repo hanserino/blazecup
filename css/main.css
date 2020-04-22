@@ -402,10 +402,6 @@ body.active-nav .footer__sb{
    Segments
    ========================================================================== */
 
-.segments{
-
-}
-
 .segments__segment{
   display: flex;
   flex-direction: column;
@@ -421,7 +417,7 @@ body.active-nav .footer__sb{
   font-size: 2rem;
 }
 
-.segment__link{
+.segment__resources{
   width: 100%;
   position: relative;
   display: block;
@@ -431,11 +427,11 @@ body.active-nav .footer__sb{
 
 }
 
-.segment__link__img{
+.segment__resources img {
   display: block;
 }
 
-.segment__link__text{
+.segment__resources a{
   display: block;
   color: var(--sb-pink);
   font-size: 1.25rem;
@@ -450,7 +446,6 @@ body.active-nav .footer__sb{
 .segment__stats{
   width: 100%;
   padding: 1rem;
-  
 }
 
 .segment__stats__item{
@@ -475,24 +470,22 @@ body.active-nav .footer__sb{
 }
 
 @media screen and (min-width: 700px){
-  .segment__link{
+  .segment__resources{
     max-width: 25rem;
     padding: 2rem 3rem 2rem 0;
     border-right: 2px solid var(--sb-grey);
   }
 
-  .segment__link:hover img {
-    filter: contrast(1.2);
-  }
   .segments__segment__inner{
     display: flex;
   }
 
-  .segment__link__text{
+  .segment__resources a {
     position: relative;
     font-size: 1.5rem;
-    margin: 1rem 0 0 0;
+    margin: .5rem 0;
   }
+  
   .segment__title {
     font-size: 3rem;
     margin: 0;
