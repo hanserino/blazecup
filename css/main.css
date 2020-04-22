@@ -105,9 +105,9 @@ img {
 
 @media screen and (max-width: 700px){
   .header__nav {
+    position: absolute;
     transform: translate(-100%,0);
     padding: 6rem 0 0 0;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -133,7 +133,9 @@ img {
 }
 
 #nav-burger{
+  outline: none;
   position: absolute;
+  cursor: pointer;
   right: 0;
   top: 1rem;
   transform: translate(100%, 0);
@@ -142,6 +144,9 @@ img {
   font-size: 1rem;
   padding: 0;
   border: 0; 
+}
+#nav-burger:hover .burger-text{
+  color: white;
 }
 
 .burger-text {
@@ -198,8 +203,11 @@ body.active-nav .footer__sb{
 }
 
 .active-nav .header__nav {
-  transform: translate(0,0)
+  transform: translate(0,0);
+  position: fixed;
 }
+
+
 
 .header__nav__list {
   list-style: none;
@@ -294,7 +302,6 @@ body.active-nav .footer__sb{
     left: 0;
   }
   .header__nav__link{
-    color: white;
     font-size: 1.5rem;
     padding: 0.2rem 0.5rem 0.2rem 3rem;
   }
