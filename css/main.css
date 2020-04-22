@@ -144,6 +144,8 @@ img {
   font-size: 1rem;
   padding: 0;
   border: 0; 
+  width: 2.5rem;
+  height: 4rem;
 }
 #nav-burger:hover .burger-text{
   color: white;
@@ -178,7 +180,7 @@ img {
 .burger-line-3{top: 100%;}
 
 body.active-nav #nav-burger {
-  transform: translate(0, 1rem);
+  transform: translate(0, 0);
   right: 0;
   left: 1rem;
 }
