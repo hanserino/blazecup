@@ -28,8 +28,19 @@ if ( $(window).width() > 700 ) {
         } else {
             $('nav').removeClass('sticky');
             $('nav a.header__nav__link--active').removeClass('header__nav__link--active');
-            //$('nav a:first').addClass('header__nav__link--active');
         }
 
     }).scroll();
 }
+
+
+$(document).ready(function() {
+    $("#nav-burger").click(function(){  
+        $("body").toggleClass("active-nav");
+
+        $(this).find('.burger-text').text(function(i, text){
+            return text === "Meny" ? "Lukk" : "Meny";
+        })
+    });
+});
+
