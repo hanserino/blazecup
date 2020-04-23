@@ -42,5 +42,10 @@ $(document).ready(function() {
             return text === "Meny" ? "Lukk" : "Meny";
         })
     });
+
+    $(".header__nav__link").click(function(){
+        $("body").removeClass("active-nav");
+    });
+    
 });
 
