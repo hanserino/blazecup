@@ -5,6 +5,7 @@
   --sb-pink: #fc5584;
   --sb-grey: #6c6c6c;
   --sb-grey2: #5b5b5b;
+  --sb-grey3: #9B9B9B;
 }
 
 
@@ -27,21 +28,21 @@ html {
 }
 
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'IBM Plex Sans', Helvetica, sans-serif;
   background: var(--sb-black);
   color: white;
   font-size: 1.15rem;
 }
 section {
-  
+
 }
 
 h1, h2, h3 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 200;
+  font-family: Barlow, sans-serif;
+  font-weight: 100;
 }
 h1{
-  word-spacing: -.5rem;
+  word-spacing: -.05rem;
   font-size: 2.5rem;
 }
 
@@ -50,7 +51,7 @@ h1{
     font-size: 4rem;
   }
 }
- 
+
 .vr-type-1 {
   text-shadow: -2px 2px 0px var(--sb-navyBlue),
               -4px 4px 0px var(--sb-orange),
@@ -103,6 +104,13 @@ img {
   font-weight: 300;
 }
 
+@media screen and (min-width: 700px){
+  .header__nav__link{
+    max-width: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 @media screen and (max-width: 700px){
   .header__nav {
     position: absolute;
@@ -113,23 +121,27 @@ img {
     width: 100vw;
     height: 100vh;
     z-index: 9999;
-    background: rgba(0,0,0,.92);
+    background: rgba(0,0,0,.89);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
     text-align: center;
     border: none;
   }
   .header__nav__item {
     width: 80%;
     border-top: 1px solid rgba(255,255,255,.1);
-    
+
   }
   .header__nav__item:first-child{
     border: none;
   }
 
   .header__nav__link{
-    
+
   }
-  
+  h1, h2, h3, h4 {
+    hyphens: manual;
+  }
 }
 
 #nav-burger{
@@ -143,7 +155,7 @@ img {
   text-align: center;
   font-size: 1rem;
   padding: 0;
-  border: 0; 
+  border: 0;
   width: 2.5rem;
   height: 4rem;
 }
@@ -440,7 +452,7 @@ body.active-nav .footer__sb{
 }
 
 .segment__link:hover .segment__link__text{
-  
+
 }
 
 .segment__stats{
@@ -464,7 +476,7 @@ body.active-nav .footer__sb{
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1;
   margin: 0 0 1rem 0;
 }
@@ -485,7 +497,7 @@ body.active-nav .footer__sb{
     font-size: 1.5rem;
     margin: .5rem 0;
   }
-  
+
   .segment__title {
     font-size: 3rem;
     margin: 0;
@@ -536,8 +548,8 @@ body.active-nav .footer__sb{
 }
 
 .rules__article h4{
-  color: #9b9b9b;
-  margin: 0; 
+  color: var(--sb-grey3);
+  margin: 0;
 }
 
 .rules__article .highlight {
@@ -546,7 +558,7 @@ body.active-nav .footer__sb{
 
 .rules__article p{
   margin-top: 0;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .footer{
@@ -555,7 +567,7 @@ body.active-nav .footer__sb{
 }
 
 .footer__inner{
-  
+
 }
 
 .footer__title {
@@ -587,6 +599,7 @@ body.active-nav .footer__sb{
     columns: 2;
     column-gap: 3rem;
     padding: 0;
+    column-fill: balance;
   }
 
   .footer {
@@ -608,11 +621,48 @@ body.active-nav .footer__sb{
     max-width: 850px;
     padding-left: 12rem;
   }
-  
+
 }
 
+/* ==========================================================================
+   Leaderboards
+   ========================================================================== */
 
-
+.leaderboards {}
+.leaderboards__ingress {
+  color: var(--sb-grey3);
+}
+.leaderboards__table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-bottom: 2px dashed var(--sb-grey);
+}
+.leaderboards__table th {
+  text-align: left;
+  color: var(--sb-orange);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.75rem;
+  border-bottom: 2px dashed var(--sb-grey);
+}
+.leaderboards__table td {
+  border-bottom: 1px dashed var(--sb-grey);
+  transition: text-shadow 0.2s ease-out;
+}
+.leaderboards__table tr th:first-child,
+.leaderboards__table tr td:first-child {
+  width: 4em;
+}
+.leaderboards__table tr th:last-child,
+.leaderboards__table tr td:last-child {
+  width: 10em;
+}
+.leaderboards__table tr:hover td {
+  text-shadow: -2px 2px 0px var(--sb-navyBlue),
+              -4px 4px 0px var(--sb-orange);
+}
 
 /* ==========================================================================
    Other global stuff
@@ -629,7 +679,7 @@ body.active-nav .footer__sb{
 }
 
 @media screen and (min-width: 700px){
-  
+
 }
 
 
