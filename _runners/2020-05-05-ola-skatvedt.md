@@ -1,9 +1,7 @@
 ---
 published: true
-title: Ola-Skatvedt
 name: Ola Skatvedt
-insta_user: ola123
+insta_user: ola_skatvedt
 strava_id: '158978'
 stirsdag_time: '0:56:44'
 ---
-Dette kommer ikke med. Bare la det stå. 
