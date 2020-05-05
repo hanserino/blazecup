@@ -62,12 +62,15 @@ $(document).ready(function() {
 
         if(bc1Time){
             bc1Score = moment.duration(bc1Time).asSeconds();
+            $(this).find('.bc1-time').text(parseInt(bc1Score*(1/60)));
         }
         if(bc2Time){
             bc2Score = moment.duration(bc2Time).asSeconds() / 2;
+            $(this).find('.bc2-time').text(parseInt(bc2Score*(1/60)));
         }
         if(bc3Time){
             bc3Score = moment.duration(bc3Time).asSeconds() / 4;
+            $(this).find('.bc3-time').text(parseInt(bc3Score*(1/60)));
         }
 
         if(bc1Score && bc2Score && bc3Score){
@@ -76,14 +79,9 @@ $(document).ready(function() {
             $(this).find('.score').text(totalScore);
             $(this).attr('data-score', totalScore);
         }
-        
-        console.log('times: ', bc1Time, bc2Time, bc3Time);
-        console.log('scores: ', bc1Score, bc2Score, bc3Score);
-        console.log('-----------------')
-
     });
 
-    $('.leaderboards__table').attr('data-manipulated', 'true');
+    $('.leaderboards__table').attr('data-manipulated', true);
     
     
 });

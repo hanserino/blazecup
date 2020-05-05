@@ -2,9 +2,9 @@
     <thead>
     <tr>
         <th>Navn</th>
-        <th>Stirsdag Classic</th>
-        <th>Lilo Trail</th>
-        <th>Lillomarka Rundt</th>
+        <th>BC1</th>
+        <th>BC2</th>
+        <th>BC3</th>
         <th>Totalt</th>
     </tr>
     </thead>
@@ -19,14 +19,12 @@
                 {{ runner.name }}
                 {% endif %}
             </td>
-
-            <td class="bc1-time" data-time="{{ runner.stirsdag_time }}">{{ runner.stirsdag_time }}</td>
-            <td class="bc2-time" data-time="{{ runner.lilo_trail_time }}">{{ runner.lilo_trail_time }}</td>
-            <td class="bc3-time" data-time="{{ runner.lillomarka_rundt_time }}">{{ runner.lillomarka_rundt_time }}</td>
+            <td class="bc1-time" data-time="{{ runner.stirsdag_time }}"></td>
+            <td class="bc2-time" data-time="{{ runner.lilo_trail_time }}"></td>
+            <td class="bc3-time" data-time="{{ runner.lillomarka_rundt_time }}"></td>
             <td class="score" data-score=""></td>
         </tr>
     {% endfor %}
-
     </tbody>
 </table>
 
