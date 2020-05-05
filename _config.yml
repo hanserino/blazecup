@@ -22,6 +22,7 @@ prose:
     relativeLinks: 'http://blazecup.no/links.jsonp'
     metadata:
         _runners:
+            - {name: title, field: {element: text, value: ""}}
             - {name: published, field: {element: hidden, value: 'true'}}
             - {name: name, field: {element: text, label: 'Name', placeholder: 'Anders Martinsen', value: ""}}
             - {name: insta_user, field: {element: text, label: 'Insta username', placeholder: 'hanserino', value: ""}}
