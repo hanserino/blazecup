@@ -78,12 +78,13 @@ $(document).ready(function() {
             $(this).addClass('complete');
             $(this).find('.score').text(totalScore);
             $(this).attr('data-score', totalScore);
+            $(this).attr('data-sort', totalScore);
         }
     });
 
     $('.leaderboards__table').attr('data-manipulated', true);
     
     new Tablesort(document.getElementById('scoreboardTable'));
-    
+
 });
 
