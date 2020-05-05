@@ -649,6 +649,7 @@ width: 150px;
     ========================================================================== */
 
 .leaderboards {
+
     a {
         color: inherit;
         text-decoration: none;
@@ -662,6 +663,7 @@ width: 150px;
     color: $sb-grey3;
 }
 .leaderboards__table {
+    margin: 1rem 0 0 0;
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
@@ -669,16 +671,17 @@ width: 150px;
     border-bottom: 2px dashed $sb-grey;
 }
 .leaderboards__table th {
-text-align: left;
-color: $sb-orange;
-text-transform: uppercase;
-font-weight: 400;
-font-size: 0.75rem;
-border-bottom: 2px dashed $sb-grey;
+    text-align: left;
+    color: $sb-orange;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.75rem;
+    border-bottom: 2px dashed $sb-grey;
+    cursor: pointer;
 }
 .leaderboards__table td {
-border-bottom: 1px dashed $sb-grey;
-transition: text-shadow 0.2s ease-out;
+    border-bottom: 1px dashed $sb-grey;
+    transition: text-shadow 0.2s ease-out;
 }
 .leaderboards__table tr th:first-child,
 .leaderboards__table tr td:first-child {
@@ -689,8 +692,8 @@ transition: text-shadow 0.2s ease-out;
 //width: em;
 }
 .leaderboards__table tr:hover td {
-text-shadow: -2px 2px 0px $sb-navyBlue,
-            -4px 4px 0px $sb-orange;
+    text-shadow: -2px 2px 0px $sb-navyBlue,
+                -4px 4px 0px $sb-orange;
 }
 
 /* ==========================================================================
