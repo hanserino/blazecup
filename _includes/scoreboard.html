@@ -1,0 +1,34 @@
+<table class="leaderboards__table" id="scoreboardTable" data-manipulated="false">
+    <thead>
+    <tr>
+        <th data-sort-method='none'>Navn</th>
+        <th>BC1</th>
+        <th>BC2</th>
+        <th>BC3</th>
+        <th>Total score</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% for runner in site.runners  %}
+        <tr class="runner-row">
+            <td>
+                {% if runner.strava_id %}
+                <a href="https://www.strava.com/athletes/{{runner.strava.id}}">{{ runner.name }}</a>
+                {% else if %}
+                {{ runner.name }}
+                {% endif %}
+            </td>
+            <td class="bc1-time" data-time="{{ runner.stirsdag_time }}"></td>
+            <td class="bc2-time" data-time="{{ runner.lilo_trail_time }}"></td>
+            <td class="bc3-time" data-time="{{ runner.lillomarka_rundt_time }}"></td>
+            <td class="score" data-score=""></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    
+
+</script>
