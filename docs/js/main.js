@@ -86,7 +86,7 @@ $(document).ready(function() {
     new Tablesort(document.getElementById('scoreboardTable'), {
         descending: true
     });
-    sort.refresh();
+    
 
 });
 
