@@ -17,7 +17,7 @@ defaults:
 
 prose:
     rooturl: _runners
-    media: media
+    media: assets/media
     siteurl: 'http://blazecup.no/'
     relativeLinks: 'http://blazecup.no/links.jsonp'
     metadata:
@@ -30,3 +30,12 @@ prose:
             - {name: stirsdag_time, field: {element: text, label: Stirsdag time, placeholder: '57:45:00', value: ""}}
             - {name: lilo_trail_time, field: {element: text, label: Lilo Trail time, placeholder: '2:15:43', value: ""}}
             - {name: lillomarka_rundt_time, field: {element: text, label: Lillomarka Rundt time, placeholder: '5:35:21', value: ""}}
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
