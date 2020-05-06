@@ -1,5 +1,4 @@
 baseurl: ""
-# url: 'http://0.0.0.0:4000/'
 url: 'http://blazecup.no/'
 destination: docs
 markdown: kramdown

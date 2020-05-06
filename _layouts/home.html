@@ -6,70 +6,18 @@
     <title>Lillo Blaze Cup 2020 | 3 trails 1 cup</title>
     <meta name="description" content="En virtuell stiløpecup i Lillomarka 1. mai til 31. juli i regi av Sky Blazers">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:image" content="img/fb-teaser.jpg">
+    <meta property="og:image" content="{{ "/assets/img/fb-teaser.jpg" | relative_url }}">
     <meta property="og:url" content="https://blazecup.no/">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{{ site.url }}/assets/style/main.css"">
-
+    <link rel="stylesheet" href="{{ "/assets/style/main.css" | relative_url }}">
 </head>
  
 <body>
     <main>
-        <header class="header">
-
-            <h1 class="header__logo">
-                <span class="header__title sr-only">Lillo Blaze Cup 2020</span>
-                <img class="header__logo__img" src="{{ site.url }}/img/lillo_blazecup.png" alt="Lillo Blaze Cup Logo">
-            </h1>
-
-            <div class="header__inner">
-                <div class="header__intro">
-                    <span class="header__intro__date"><time datetime="2020-05-01 00:00">01. mai</time> til <time datetime="2020-07-31 00:00">31. juli</time></span>
-                    <h1 class="header__intro__text1">Hvem er kongen og dronninga av Lillomarka?</h1>
-                    <h1 class="header__intro__text2 vr-type-1">En virtuell stiløpecup</h1>
-
-                    <div class="header__sponsor">
-                        <h3 class="header__sponsor__title">Med hjelp fra</h3>
-
-                        <div class="header__sponsor__item">
-                            <a tabindex="3" href="https://arcteryx.com/no/no/">
-                                <img src="{{ site.url }}/img/arcteryx_oslo_logo.png" alt="Arc'teryx Oslo Logo">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <nav class="header__nav" id="nav">
-                    <button tabindex="-1" id="nav-burger">
-                        <span class="burger-lines">
-                            <span class="burger-line-1"></span>
-                            <span class="burger-line-2"></span>
-                            <span class="burger-line-3"></span>
-                        </span>
-                        <span class="burger-text">Meny</span>
-                    </button>
-
-                    <ul class="header__nav__list" >
-                        <li class="header__nav__item">
-                            <a tabindex="1" class="header__nav__link" href="#ruter" data-scroll="ruter">Ruter</a>
-                        </li>
-                        <li class="header__nav__item">
-                            <a tabindex="2" class="header__nav__link" href="#regler" data-scroll="regler">Regler</a>
-                        </li>
-                        <!--<li class="header__nav__item">
-                            <a tabindex="3" class="header__nav__link" href="#premier" data-scroll="regler">Premier</a>
-                        </li>-->
-                        <li class="header__nav__item">
-                            <a tabindex="4" class="header__nav__link" href="#scoreboard" data-scroll="ledertabeller">Scoreboard</a>
-                        </li>
-                    </ul>
-
-                </nav>
-            </div>
-        </header>
+        {% include header.html %}
 
         <section class="site-section img-break">
-            <img src="{{ site.url }}/img/header.jpg" alt="Hanserino som løper en ukjent sti i Lillomarka">
+            <img src="{{ "/assets/img/header.jpg" | relative_url }}" alt="Hanserino som løper en ukjent sti i Lillomarka">
         </section>
 
         <section id="ruter" data-anchor="ruter" class="site-section segments">
@@ -83,9 +31,9 @@
                     <h3 class="segment__title" id="stirsdag-classic">BC1: Stirsdag Classic</h3>
                         <div class="segments__segment__inner">
                             <div class="segment__resources">
-                                <img src="{{ site.url }}/img/stirsdag.jpg" alt="Bilde av gps-sporene til Stirsdag Classic-segmentet">
+                                <img src="{{ "/assets/img/stirsdag.jpg" | relative_url }}" alt="Bilde av gps-sporene til Stirsdag Classic-segmentet">
                                 <a href="https://www.strava.com/segments/16455185" target="_blank">Stirsdag Classic på Strava</a>
-                                <a href="downloads/Stirsdag.gpx.zip" download="Stirsdag.gpx.zip">Last ned .gpx (25kB)</a>
+                                <a href="{{ "/assets/downloads/Stirsdag.gpx.zip" | relative_url }}" download="Stirsdag.gpx.zip">Last ned .gpx (25kB)</a>
                                 <a href="https://forms.gle/AcD1uQW7j7CYMqzG8" target="_blank">Meld inn din innsats</a>
                             </div>
 
@@ -112,9 +60,9 @@
                     <div class="segments__segment__inner">
 
                         <div class="segment__resources">
-                            <img src="{{ site.url }}/img/lilotrail.jpg" alt="Bilde av gps-sporene til Lillo Trail-segmentet">
+                            <img src="{{ "/assets/img/lilotrail.jpg" | relative_url }}" alt="Bilde av gps-sporene til Lillo Trail-segmentet">
                             <a href="https://www.strava.com/segments/18649264" target="_blank">Lilo Trail på Strava</a>
-                            <a href="downloads/lilotrail.gpx.zip" download="lilotrail.gpx.zip">Last ned .gpx (110kB)</a>
+                            <a href="{{ "/assets/downloads/lilotrail.gpx.zip" | relative_url }}" download="lilotrail.gpx.zip">Last ned .gpx (110kB)</a>
                             <a href="https://forms.gle/AcD1uQW7j7CYMqzG8" target="_blank">Meld inn din innsats</a>
                         </div>
 
@@ -139,9 +87,9 @@
                     <h3 class="segment__title" id="lillomarka-rundt">BC3: Lillomarka Rundt</h3>
                     <div class="segments__segment__inner">
                         <div class="segment__resources">
-                            <img src="{{ site.url }}/img/lillomarka_rundt.jpg" alt="Bilde av gps-sporene til Lillomarka Rundt">
+                            <img src="{{ "/assets/img/lillomarka_rundt.jpg" | relative_url }}" alt="Bilde av gps-sporene til Lillo Trail-segmentet">
                             <a href="https://www.strava.com/segments/23461915" target="_blank">Lillomarka Rundt på Strava</a>
-                            <a href="downloads/BlazeCup2020_LillomarkaRundt.gpx.zip" download="Lillomarka_Rundt.gpx.zip">Last ned .gpx (85kB)</a>
+                            <a href="{{ "/assets/downloads/BlazeCup2020_LillomarkaRundt.gpx.zip" | relative_url }}" download="Lillomarka_Rundt.gpx.zip">Last ned .gpx (85kB)</a>
                             <a href="https://forms.gle/AcD1uQW7j7CYMqzG8" target="_blank">Meld inn din innsats</a>
                         </div>
 
@@ -224,27 +172,17 @@
 			{% include scoreboard.html %}
             
         </section>
-        <footer id="footer" class="footer">
-            <div class="footer__inner">
-                <h1 class="footer__title">
-                    <span>Måtte den beste kongen og dronninga av Lillomarka seire!</span>
-                    <span class="vr-type-1">Kjør hardt!!!</span>
-                </h1>
-            </div>
- 
-            <a class="footer__sb" href="http://skyblazers.no/" target="_blank">
-				<img src="{{ site.url }}/img/skyblazers.v2.negative.simplified.png" alt="Sky Blazers Logo" />
-            </a>
 
-        </footer>
+        {% include footer.html %}
+
     </main>
 
 
-    <script src="{{ site.url }}/js/vendor/moment.js"></script>
+    <script src={{ "/assets/scripts/vendor/moment.js" | relative_url }}></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-    <script src="{{ site.url }}/js/tablesort.min.js"></script>
-    <script src="{{ site.url }}/js/main.js"></script>
+    <script>window.jQuery || document.write('{{ "/assets/vendor/jquery-3.4.1.min.js" | relative_url }}><\/script>')</script>
+    <script src={{ "/assets/plugins/tablesort.min.js" | relative_url }}></script>
+    <script src={{ "/assets/scripts/main.js" | relative_url }}></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163405044-1"></script>
     <script>
