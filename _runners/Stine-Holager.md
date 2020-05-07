@@ -1,7 +1,7 @@
 ---
 name: Stine Holager
 strava_id: '1932218'
-insta: 
+insta: stinehol
 gender: f
 stirsdag_time: ''
 lilo_trail_time: '2:14:45'
