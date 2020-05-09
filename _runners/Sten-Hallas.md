@@ -1,7 +1,9 @@
 ---
 published: true
 title: Sten Hallas
-stirsdag_time: '1:37:33'
 name: Sten Hallas
+gender: m
+stirsdag_time: '1:37:33'
+lilo_trail_time: '3:29:33'
 ---
 
