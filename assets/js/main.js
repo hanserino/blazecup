@@ -64,7 +64,7 @@ $(document).ready(function () {
 
     if (bc1Time) {
       bc1Score = moment.duration(bc1Time).asSeconds();
-      $(this)
+      $(this) 
         .find(".bc1-time")
         .text(parseInt(bc1Score * (1 / 60)));
     }
