@@ -1,0 +1,5 @@
+---
+title: Scoreboard
+layout: scoreboard
+--- 
+ 
