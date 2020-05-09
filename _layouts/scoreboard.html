@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="nb">
+
+<head> 
+    <meta charset="utf-8"> 
+    <title>Lillo Blaze Cup 2020 | Scoreboard</title>
+    <meta name="description" content="En virtuell stiløpecup i Lillomarka 1. mai til 31. juli i regi av Sky Blazers">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="{{ "/assets/img/fb-teaser.jpg" | relative_url }}">
+    <meta property="og:url" content="https://blazecup.no/">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/assets/style/main.css" | relative_url }}">
+</head>
+  
+<body> 
+    <main class="scoreboard-page">
+        <header class="scoreboard-page__header">
+            <h1>{{page.title}}</h1>
+            <p>
+                Dette er ståa pr. {{ "now" | date: "%d/%m/%Y" }}. Dæven steike hvor fort dere løper! Lillomarka kommer jo ikke til å se ut etter 31. juli.
+            </p>
+
+            <p class="announcement">
+                Nyhet! Nå er lista oppdatert slik at de raskeste ligger på topp. Du kan også filtrere ved å trykke på kolonne-tittelen. Prøv, da vel!
+            </p>
+        </header>
+        
+        {% include scoreboard.html %}
+
+        <div class="scoreboard-page__disclaimer">
+            <p>Ser du ikke deg selv og din siste innsats på lista? Det kan være fordi:</p>
+            <ol>
+                <li>Du ikke har sendt inn din innsats til oss</li>
+                <li>Vi ikke har rukket å legge deg inn i lista</li>
+            </ol>
+        </div>
+
+        {% include footer.html %}
+        
+    </main>
+
+
+    <script src={{ "/assets/js/vendor/moment.js" | relative_url }}></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('{{ "/assets/js/vendor/jquery-3.4.1.min.js" | relative_url }}><\/script>')</script>
+    <script src={{ "/assets/js/plugins/tablesort.min.js" | relative_url }}></script>
+    <script src={{ "/assets/js/plugins/tablesort.number.js" | relative_url }}></script>
+    <script src={{ "/assets/js/main.js" | relative_url }}></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163405044-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+ 
+        gtag('config', 'UA-163405044-1');
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+.scoreboard-page{
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: .15rem;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    @include allAbove(medium){
+        padding: 0 1rem;
+    }
+
+    &__header{
+        margin: 0 0 2rem 0;
+    }
+
+    &__disclaimer {
+        p {
+            margin: 1rem 0;
+        }
+        ul, ol {
+            margin: 0 0 0 2rem;
+            padding: 0;
+        }
+    }
+
+    .announcement {
+        border: 2px solid white;
+        background: #59b959;
+        padding: .5rem;
+        margin: 1rem 0;
+        display: block;
+        max-width: 400px;
+    }
+}
