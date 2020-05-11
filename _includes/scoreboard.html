@@ -17,7 +17,7 @@
     <tr class="runner-row">
       <td>
         {% if runner.strava_id %}
-        <a href="https://www.strava.com/athletes/{{runner.strava.id}}"
+        <a href="https://www.strava.com/athletes/{{ runner.strava_id }}"
           >{{ runner.name }}</a
         >
         {% else if %} {{ runner.name }} {% endif %}
