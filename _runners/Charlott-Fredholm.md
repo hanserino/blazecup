@@ -6,4 +6,4 @@ gender: m
 stirsdag_time: '2:04:13'
 lilo_trail_time: ''
 lillomarka_rundt_time: ''
---- 
+---
