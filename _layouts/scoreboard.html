@@ -12,17 +12,14 @@
     <link rel="stylesheet" href="{{ "/assets/style/main.css" | relative_url }}">
 </head>
   
-<body> 
+<body data-score-mode="points"> 
     <main class="scoreboard-page">
         <header class="scoreboard-page__header">
             <h1>{{page.title}}</h1>
             <p>
-                Dette er ståa pr. {{ "now" | date: "%d/%m/%Y" }}. Dæven steike hvor fort dere løper! Lillomarka kommer jo ikke til å se ut etter 31. juli.
+                Dette er ståa <em>{{ "now" | date: "%d/%m/%Y" }}</em>. Dæven steike hvor fort dere løper! Lillomarka kommer jo ikke til å se ut etter 31. juli.
             </p>
 
-            <p class="announcement">
-                Nyhet! Nå er lista oppdatert slik at de raskeste ligger på topp. Du kan også filtrere ved å trykke på kolonne-tittelen. Prøv, da vel!
-            </p>
         </header>
         
         {% include scoreboard.html %}
