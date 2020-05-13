@@ -751,3 +751,24 @@ table[data-manipulated="false"]{
 table[data-manipulated="true"]{
     display: table;
 }
+
+
+
+[data-time="true"]{
+    span.time {
+        display: block;
+    }
+    span.points {
+      display: none;
+    }
+  }
+
+  [data-time="false"]{
+      span.time {
+          display: none;
+      }
+      span.points {
+        display: block;
+    }
+  }
+  
