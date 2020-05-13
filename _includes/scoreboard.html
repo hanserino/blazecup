@@ -1,3 +1,8 @@
+<div class="score-switch">
+  <label for="scoreSwitch">Vis tider</label>
+  <input type="checkbox" id="scoreSwitch" />
+</div>
+
 <table
   class="leaderboards__table"
   id="scoreboardTable"
@@ -9,26 +14,33 @@
       <th data-sort-default data-sort-method="number">BC1</th>
       <th data-sort-method="number">BC2</th>
       <th data-sort-method="number">BC3</th>
-      <th data-sort-method="number">Total BC Score</th>
+      <th data-sort-method="number">Totalt</th>
     </tr>
   </thead>
   <tbody>
     {% for runner in site.runners %}
+    
     <tr class="runner-row">
       <td>
         {% if runner.strava_id %}
-        <a href="https://www.strava.com/athletes/{{ runner.strava_id }}"
-          >{{ runner.name }}</a
-        >
+        <a href="https://www.strava.com/athletes/{{ runner.strava_id }}">{{ runner.name }}</a>
         {% else if %} {{ runner.name }} {% endif %}
       </td>
-      <td class="bc1-time" data-time="{{ runner.stirsdag_time }}"></td>
-      <td class="bc2-time" data-time="{{ runner.lilo_trail_time }}"></td>
-      <td class="bc3-time" data-time="{{ runner.lillomarka_rundt_time }}"></td>
-      <td class="score" data-score=""></td>
+      <td class="bc1" data-time="{{ runner.stirsdag_time }}">
+        <span class="points"></span>
+        <span class="time">{{ runner.stirsdag_time }}</span>
+      </td>
+      <td class="bc2" data-time="{{ runner.lilo_trail_time }}">
+        <span class="points"></span>
+        <span class="time">{{ runner.lilo_trail_time }}</span>
+      </td>
+      <td class="bc3" data-time="{{ runner.lillomarka_rundt_time }}">
+        <span class="points"></span>
+        <span class="time">{{ runner.lillomarka_rundt_time }}</span>
+      </td>
+
+      <td class="total" data-score=""><span class="points"></span><span class="time"></span></td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
-
-<script></script>

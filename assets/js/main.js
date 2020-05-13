@@ -39,6 +39,7 @@ if ($(window).width() > 700) {
 }
 
 $(document).ready(function () {
+
   $("#nav-burger").click(function () {
     $("body").toggleClass("active-nav");
 
@@ -53,43 +54,68 @@ $(document).ready(function () {
     $("body").removeClass("active-nav");
   });
 
+
+
   $(".runner-row").each(function (i) {
     var bc1Score, bc2Score, bc3Score, totalScore;
+    var bc1Time, bc2Time, bc3Time, totalTime;
 
-    var bc1Time, bc2Time, bc3Time;
-
-    bc1Time = $(this).find(".bc1-time").data("time");
-    bc2Time = $(this).find(".bc2-time").data("time");
-    bc3Time = $(this).find(".bc3-time").data("time");
+    bc1Time = $(this).find(".bc1").data("time");
+    bc2Time = $(this).find(".bc2").data("time");
+    bc3Time = $(this).find(".bc3").data("time");
 
     if (bc1Time) {
       bc1Score = moment.duration(bc1Time).asSeconds();
-      $(this) 
-        .find(".bc1-time")
-        .text(parseInt(bc1Score * (1 / 60)));
+      var parcedBc1Score = parseInt(bc1Score * (1 / 60));
+      $(this).find(".bc1").find('.points').html(parcedBc1Score);
     }
+
     if (bc2Time) {
       bc2Score = moment.duration(bc2Time).asSeconds() / 2;
-      $(this)
-        .find(".bc2-time")
-        .text(parseInt(bc2Score * (1 / 60)));
+      var parcedBc2Score = parseInt(bc2Score * (1 / 60));
+      $(this).find(".bc2").find('.points').html(parcedBc2Score);
     }
+    
     if (bc3Time) {
-      bc3Score = moment.duration(bc3Time).asSeconds() / 4;
-      $(this)
-        .find(".bc3-time")
-        .text(parseInt(bc3Score * (1 / 60)));
+      bc3Score = moment.duration(bc3Time).asSeconds() / 4; 
+      var parsedBc3Score = parseInt(bc3Score * (1 / 60));
+      $(this).find(".bc3").find('.points').html(parsedBc3Score);
     }
 
     if (bc1Score && bc2Score && bc3Score) {
       totalScore = parseInt((bc1Score + bc2Score + bc3Score) * (1 / 60));
+
+      totalTime = moment.duration(bc1Time).asSeconds() + moment.duration(bc2Time).asSeconds() + moment.duration(bc3Time).asSeconds();
+
+      var formattedTotalTime = moment.utc(totalTime*1000).format('HH:mm:ss');
+
       $(this).addClass("complete");
-      $(this).find(".score").text(totalScore);
       $(this).attr("data-score", totalScore);
       $(this).attr("data-sort", totalScore);
+
+      $(this).find(".total").find('.points').html(totalScore);
+      $(this).find(".total").find('.time').html(formattedTotalTime);
     }
+
   });
 
   $(".leaderboards__table").attr("data-manipulated", true);
   new Tablesort(document.getElementById("scoreboardTable"));
+
+
+  //Tabell-switch
+  var timeIsVisible = $('#scoreSwitch').is(':checked');
+
+  function tableSwitch(checkedStatus){
+    checkedStatus = timeIsVisible;
+    $('body').attr('data-time', checkedStatus);
+  }
+
+  tableSwitch(timeIsVisible);
+
+  $('#scoreSwitch').change(function () {
+    timeIsVisible = $(this).is(':checked');
+    tableSwitch(timeIsVisible);
+  });
+
 });
