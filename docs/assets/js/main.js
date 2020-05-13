@@ -67,18 +67,21 @@ $(document).ready(function () {
     if (bc1Time) {
       bc1Score = moment.duration(bc1Time).asSeconds();
       var parcedBc1Score = parseInt(bc1Score * (1 / 60));
+      $(this).find(".bc1").attr('data-sort', parcedBc1Score);
       $(this).find(".bc1").find('.points').html(parcedBc1Score);
     }
 
     if (bc2Time) {
       bc2Score = moment.duration(bc2Time).asSeconds() / 2;
       var parcedBc2Score = parseInt(bc2Score * (1 / 60));
+      $(this).find(".bc2").attr('data-sort', parcedBc2Score);
       $(this).find(".bc2").find('.points').html(parcedBc2Score);
     }
     
     if (bc3Time) {
       bc3Score = moment.duration(bc3Time).asSeconds() / 4; 
       var parsedBc3Score = parseInt(bc3Score * (1 / 60));
+      $(this).find(".bc3").attr('data-sort', parsedBc3Score);
       $(this).find(".bc3").find('.points').html(parsedBc3Score);
     }
 
