@@ -96,21 +96,26 @@ $(document).ready(function () {
       $(this).find(".total").find('.points').html(totalScore);
       $(this).find(".total").find('.time').html(formattedTotalTime);
     }
-    
+
   });
 
   $(".leaderboards__table").attr("data-manipulated", true);
   new Tablesort(document.getElementById("scoreboardTable"));
 
 
-  $('input#dn').change(
-    function(){
-        if ($(this).is(':checked')) {
-            $('body').attr('data-score-mode', 'points');
-        }else{
-          $('body').attr('data-score-mode', 'time');
-        }
-    });
+  //Tabell-switch
+  var timeIsVisible = $('#scoreSwitch').is(':checked');
 
+  function tableSwitch(checkedStatus){
+    checkedStatus = timeIsVisible;
+    $('body').attr('data-time', checkedStatus);
+  }
+
+  tableSwitch(timeIsVisible);
+
+  $('#scoreSwitch').change(function () {
+    timeIsVisible = $(this).is(':checked');
+    tableSwitch(timeIsVisible);
+  });
 
 });

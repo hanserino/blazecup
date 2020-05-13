@@ -12,21 +12,19 @@
     <link rel="stylesheet" href="/assets/style/main.css">
 </head>
   
-<body data-score-mode="points"> 
+<body data-time=""> 
     <main class="scoreboard-page">
         <header class="scoreboard-page__header">
             <h1>Scoreboard</h1>
             <p>
-                Dette er ståa <em>12/05/2020</em>. Dæven steike hvor fort dere løper! Lillomarka kommer jo ikke til å se ut etter 31. juli.
+                Dette er ståa <em>13/05/2020</em>. Dæven steike hvor fort dere løper! Lillomarka kommer jo ikke til å se ut etter 31. juli.
             </p>
 
         </header>
         
-        <div class="toggleWrapper">
-  <input type="checkbox" class="dn" id="dn" checked="true" />
-  <label for="dn" class="toggle">
-    <span class="toggle__handler"></span>
-  </label>
+        <div class="score-switch">
+  <label for="scoreSwitch">Vis tider</label>
+  <input type="checkbox" id="scoreSwitch" />
 </div>
 
 <table
@@ -40,7 +38,7 @@
       <th data-sort-default data-sort-method="number">BC1</th>
       <th data-sort-method="number">BC2</th>
       <th data-sort-method="number">BC3</th>
-      <th data-sort-method="number">Total BC Score</th>
+      <th data-sort-method="number">Totalt</th>
     </tr>
   </thead>
   <tbody>
@@ -1227,9 +1225,9 @@
         <span class="points"></span>
         <span class="time">0:57:45</span>
       </td>
-      <td class="bc2" data-time="1:52:45">
+      <td class="bc2" data-time="">
         <span class="points"></span>
-        <span class="time">1:52:45</span>
+        <span class="time"></span>
       </td>
       <td class="bc3" data-time="5:35:21">
         <span class="points"></span>

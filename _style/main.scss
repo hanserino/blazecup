@@ -754,96 +754,21 @@ table[data-manipulated="true"]{
 
 
 
-[data-score-mode="points"]{
+[data-time="true"]{
     span.time {
-        display: none;
+        display: block;
     }
     span.points {
-      display: block;
+      display: none;
     }
   }
 
-  [data-score-mode="time"]{
+  [data-time="false"]{
       span.time {
-          display: block;
+          display: none;
       }
       span.points {
-        display: none;
+        display: block;
     }
   }
   
-.toggleWrapper {
-    position: relative;
-    text-align: left;
-    margin: 1rem auto;
-    left: 50px;
-
-    input {
-      position: absolute;
-      left: -99em;
-    }
-}
-
-  .toggle {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    width: 90px;
-    height: 50px;
-    background-color: #83D8FF;
-    border-radius: 90px - 6;
-    transition: background-color 100ms linear;
-    
-    &:before {
-      content: 'Tid';
-      position: absolute;
-      left: -50px;
-      top: 15px;
-      font-size: 18px;
-    }
-    
-    &:after {
-      content: 'Poeng';
-      position: absolute;
-      right: -68px;
-      top: 15px;
-      font-size: 18px;
-      color: #749ED7;
-    }
-  }
-  
-  .toggle__handler {
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    top: 3px;
-    left: 3px;
-    width: 50px - 6;
-    height: 50px - 6;
-    background-color: white;
-    border-radius: 50px;
-    box-shadow: 0 2px 6px rgba(0,0,0,.3);
-    transition: all 200ms ease-out;
-    transform:  rotate(-45deg);
-  }
-  
-  input:checked {
-    + .toggle {
-      background-color: #749DD6;
-    
-      &:before {
-        color: #749ED7;
-      }
-  
-      &:after {
-        color: #ffffff;
-      }
-      
-      .toggle__handler {
-        background-color: white;
-        transform: translate3d(40px, 0, 0) rotate(0);
-    
-        .crater { opacity: 1; }
-      }
-  }
-}
