@@ -122,17 +122,17 @@ $(document).ready(function () {
   });
 
 
-  /*
+  
   //Manuell tids-kalkulator
   
-  var end = '12:08:42';
-  var start = '10:46:13';
+  var end = '01:29:14';
+  var start = '0:06:51';
  
   var ms = moment(end,"HH:mm:ss").diff(moment(start,"HH:mm:ss"));
   var d = moment.duration(ms);
   var s = Math.floor(d.asHours()) + moment.utc(ms).format(":mm:ss");
 
   console.log(ms, d, s)
-  */
+   
 
 });
