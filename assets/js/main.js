@@ -103,7 +103,9 @@ $(document).ready(function () {
   });
 
   $(".leaderboards__table").attr("data-manipulated", true);
-  new Tablesort(document.getElementById("scoreboardTable"));
+  new Tablesort(document.getElementById("scoreboardTable"), {
+    descending: true
+  });
 
 
   //Tabell-switch
