@@ -69,6 +69,12 @@ $(document).ready(function () {
       var parcedBc1Score = parseInt(bc1Score * (1 / 60));
       $(this).find(".bc1").attr('data-sort', parcedBc1Score);
       $(this).find(".bc1").find('.points').html(parcedBc1Score);
+    }else{
+      bc1Score = moment.duration('2:30:00').asSeconds();
+      var parcedBc1Score = parseInt(bc1Score * (1 / 60));
+      $(this).find(".bc1").attr('data-sort', parcedBc1Score);
+      $(this).find(".bc1").find('.points').html(parcedBc1Score);
+      $(this).attr("data-complete", false);
     }
 
     if (bc2Time) {
@@ -76,6 +82,12 @@ $(document).ready(function () {
       var parcedBc2Score = parseInt(bc2Score * (1 / 60));
       $(this).find(".bc2").attr('data-sort', parcedBc2Score);
       $(this).find(".bc2").find('.points').html(parcedBc2Score);
+    }else{
+      bc2Score = moment.duration('5:00:00').asSeconds() / 2;
+      var parcedBc2Score = parseInt(bc2Score * (1 / 60));
+      $(this).find(".bc2").attr('data-sort', parcedBc2Score);
+      $(this).find(".bc2").find('.points').html(parcedBc2Score);
+      $(this).attr("data-complete", false);
     }
     
     if (bc3Time) {
@@ -83,7 +95,14 @@ $(document).ready(function () {
       var parsedBc3Score = parseInt(bc3Score * (1 / 60));
       $(this).find(".bc3").attr('data-sort', parsedBc3Score);
       $(this).find(".bc3").find('.points').html(parsedBc3Score);
+    }else{
+      bc3Score = moment.duration('10:00:00').asSeconds() / 4; 
+      var parsedBc3Score = parseInt(bc3Score * (1 / 60));
+      $(this).find(".bc3").attr('data-sort', parsedBc3Score);
+      $(this).find(".bc3").find('.points').html(parsedBc3Score);
+      $(this).attr("data-complete", false);
     }
+    
 
     if (bc1Score && bc2Score && bc3Score) {
       totalScore = parseInt((bc1Score + bc2Score + bc3Score) * (1 / 60));
@@ -92,19 +111,19 @@ $(document).ready(function () {
 
       var formattedTotalTime = moment.utc(totalTime*1000).format('HH:mm:ss');
 
-      $(this).addClass("complete");
       $(this).attr("data-score", totalScore);
       $(this).attr("data-sort", totalScore);
 
       $(this).find(".total").find('.points').html(totalScore);
       $(this).find(".total").find('.time').html(formattedTotalTime);
+
     }
 
   });
 
   $(".leaderboards__table").attr("data-manipulated", true);
   new Tablesort(document.getElementById("scoreboardTable"), {
-    descending: true
+    
   });
 
 
