@@ -20,7 +20,7 @@
   <tbody>
     {% for runner in site.runners %} 
     
-    <tr class="runner-row">
+    <tr class="runner-row" data-complete="true">
       <td>
         {% if runner.strava_id %}
         <a href="https://www.strava.com/athletes/{{ runner.strava_id }}">{{ runner.name }}</a>
@@ -39,7 +39,10 @@
         <span class="time">{{ runner.lillomarka_rundt_time }}</span> 
       </td>
 
-      <td class="total" data-score=""><span class="points"></span><span class="time"></span></td>
+      <td class="total" data-score=""> 
+        <span class="points"></span>
+        <span class="time"></span>
+      </td>
     </tr>
     {% endfor %}
   </tbody>
