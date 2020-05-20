@@ -155,6 +155,8 @@ $(document).ready(function () {
 
   console.log(ms, d, s)
    
-
+  Notification.requestPermission().then(function(result) {
+    console.log(result);
+  });
 });
  

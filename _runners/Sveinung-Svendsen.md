@@ -5,5 +5,5 @@ insta:
 gender: m
 stirsdag_time: '1:03:33'
 lilo_trail_time: '3:03:39'
-lillomarka_rundt_time: ''
+lillomarka_rundt_time: '5:51:45'
 ---
