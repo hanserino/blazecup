@@ -19,8 +19,8 @@
   </thead>
   <tbody>
     {% for runner in site.runners %} 
-    
-    <tr class="runner-row" data-complete="true">
+     
+    <tr class="runner-row" data-complete="true"> 
       <td>
         {% if runner.strava_id %}
         <a href="https://www.strava.com/athletes/{{ runner.strava_id }}">{{ runner.name }}</a>

@@ -146,8 +146,8 @@ $(document).ready(function () {
   
   //Manuell tids-kalkulator
   
-  var end = '14:55:56';
-  var start = '09:06:44';
+  var end = '60:33:14';
+  var start = '19:42:00';
  
   var ms = moment(end,"HH:mm:ss").diff(moment(start,"HH:mm:ss"));
   var d = moment.duration(ms);
@@ -158,3 +158,5 @@ $(document).ready(function () {
   
 });
  
+
+73:30
