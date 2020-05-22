@@ -157,6 +157,3 @@ $(document).ready(function () {
    
   
 });
- 
-
-73:30
