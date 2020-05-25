@@ -1,6 +1,6 @@
 ---
 name: Bent Brørs
-strava_id: '28618692'
+strava_id: '10737532'
 insta: bjolia
 gender: m
 stirsdag_time: '1:20:40'
