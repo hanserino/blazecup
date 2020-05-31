@@ -5,5 +5,5 @@ insta: t_misk
 gender: m
 stirsdag_time: '1:09:20'
 lilo_trail_time: '2:21:23'
-lillomarka_rundt_time: ''
+lillomarka_rundt_time: '6:49:20'
 ---  
